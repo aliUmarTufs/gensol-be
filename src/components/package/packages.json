@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_package_packages",
+  "info": {
+    "displayName": "packages",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "packageName": {
+      "type": "string"
+    }
+  }
+}

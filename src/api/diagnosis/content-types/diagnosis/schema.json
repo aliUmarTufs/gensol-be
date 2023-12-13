@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diagnoses",
+  "info": {
+    "singularName": "diagnosis",
+    "pluralName": "diagnoses",
+    "displayName": "Diagnosis",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "diagnosis"
+    }
+  }
+}

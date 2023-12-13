@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "product_line": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-line.product-line",
+      "inversedBy": "categories"
+    },
+    "featuredImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "diagnosis": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::diagnosis.diagnosis",
+      "inversedBy": "categories"
+    },
+    "assessments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::assessment.assessment",
+      "inversedBy": "categories"
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::topic.topic",
+      "inversedBy": "categories"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "mappedBy": "categories"
+    },
+    "trailer": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

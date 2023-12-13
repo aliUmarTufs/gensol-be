@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "singularName": "package",
+    "pluralName": "packages",
+    "displayName": "Package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "required": true
+    },
+    "yearly": {
+      "type": "integer"
+    },
+    "packageType": {
+      "type": "enumeration",
+      "enum": [
+        "yearly",
+        "monthly"
+      ],
+      "default": "yearly",
+      "required": true
+    },
+    "packagePoints": {
+      "displayName": "packagePoints",
+      "type": "component",
+      "repeatable": true,
+      "component": "points.package-points",
+      "required": false
+    },
+    "productLine": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-line.product-line",
+      "inversedBy": "packages"
+    },
+    "numberOfStudents": {
+      "required": true,
+      "min": 1,
+      "type": "integer"
+    },
+    "perStudentMonthlyPrice": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "monthly": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_lo_points_learning_objectives",
+  "info": {
+    "displayName": "Learning Objectives",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_lines",
+  "info": {
+    "singularName": "product-line",
+    "pluralName": "product-lines",
+    "displayName": "Product Line",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "product_line"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package",
+      "mappedBy": "productLine"
+    }
+  }
+}

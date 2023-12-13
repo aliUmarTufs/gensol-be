@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_points_package_points",
+  "info": {
+    "displayName": "packagePoints",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  }
+}

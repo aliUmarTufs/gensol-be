@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assessments",
+  "info": {
+    "singularName": "assessment",
+    "pluralName": "assessments",
+    "displayName": "Assessment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "assessments"
+    }
+  }
+}
